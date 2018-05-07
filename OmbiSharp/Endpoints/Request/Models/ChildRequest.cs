@@ -7,15 +7,15 @@ namespace OmbiSharp.Endpoints.Request.Models
     /// <summary>
     /// 
     /// </summary>
-    public partial class Movie
+    public partial class ChildRequest
     {
         /// <summary>
-        /// Gets or sets the movie database identifier.
+        /// Gets or sets the parent request identifier.
         /// </summary>
         /// <value>
-        /// The movie database identifier.
+        /// The parent request identifier.
         /// </value>
-        [J("theMovieDbId")] public long TheMovieDbId { get; set; }
+        [J("parentRequestId")] public long ParentRequestId { get; set; }
 
         /// <summary>
         /// Gets or sets the issue identifier.
@@ -26,6 +26,14 @@ namespace OmbiSharp.Endpoints.Request.Models
         [J("issueId")] public long IssueId { get; set; }
 
         /// <summary>
+        /// Gets or sets the type of the series.
+        /// </summary>
+        /// <value>
+        /// The type of the series.
+        /// </value>
+        [J("seriesType")] public string SeriesType { get; set; }
+
+        /// <summary>
         /// Gets or sets the issues.
         /// </summary>
         /// <value>
@@ -34,92 +42,12 @@ namespace OmbiSharp.Endpoints.Request.Models
         [J("issues")] public List<Issue> Issues { get; set; }
 
         /// <summary>
-        /// Gets or sets the root path override.
+        /// Gets or sets the season requests.
         /// </summary>
         /// <value>
-        /// The root path override.
+        /// The season requests.
         /// </value>
-        [J("rootPathOverride")] public long RootPathOverride { get; set; }
-
-        /// <summary>
-        /// Gets or sets the quality override.
-        /// </summary>
-        /// <value>
-        /// The quality override.
-        /// </value>
-        [J("qualityOverride")] public long QualityOverride { get; set; }
-
-        /// <summary>
-        /// Gets or sets the imdb identifier.
-        /// </summary>
-        /// <value>
-        /// The imdb identifier.
-        /// </value>
-        [J("imdbId")] public string ImdbId { get; set; }
-
-        /// <summary>
-        /// Gets or sets the overview.
-        /// </summary>
-        /// <value>
-        /// The overview.
-        /// </value>
-        [J("overview")] public string Overview { get; set; }
-
-        /// <summary>
-        /// Gets or sets the poster path.
-        /// </summary>
-        /// <value>
-        /// The poster path.
-        /// </value>
-        [J("posterPath")] public string PosterPath { get; set; }
-
-        /// <summary>
-        /// Gets or sets the release date.
-        /// </summary>
-        /// <value>
-        /// The release date.
-        /// </value>
-        [J("releaseDate")] public DateTimeOffset ReleaseDate { get; set; }
-
-        /// <summary>
-        /// Gets or sets the digital release date.
-        /// </summary>
-        /// <value>
-        /// The digital release date.
-        /// </value>
-        [J("digitalReleaseDate")] public DateTimeOffset DigitalReleaseDate { get; set; }
-
-        /// <summary>
-        /// Gets or sets the status.
-        /// </summary>
-        /// <value>
-        /// The status.
-        /// </value>
-        [J("status")] public string Status { get; set; }
-
-        /// <summary>
-        /// Gets or sets the background.
-        /// </summary>
-        /// <value>
-        /// The background.
-        /// </value>
-        [J("background")] public string Background { get; set; }
-
-        /// <summary>
-        /// Gets or sets a value indicating whether this <see cref="Movie"/> is released.
-        /// </summary>
-        /// <value>
-        ///   <c>true</c> if released; otherwise, <c>false</c>.
-        /// </value>
-        [J("released")] public bool Released { get; set; }
-
-        /// <summary>
-        /// Gets or sets a value indicating whether [digital release].
-        /// </summary>
-        /// <value>
-        ///   <c>true</c> if [digital release]; otherwise, <c>false</c>.
-        /// </value>
-        [J("digitalRelease")] public bool DigitalRelease { get; set; }
+        [J("seasonRequests")] public List<SeasonRequest> SeasonRequests { get; set; }
 
         /// <summary>
         /// Gets or sets the title.
@@ -130,7 +58,7 @@ namespace OmbiSharp.Endpoints.Request.Models
         [J("title")] public string Title { get; set; }
 
         /// <summary>
-        /// Gets or sets a value indicating whether this <see cref="Movie"/> is approved.
+        /// Gets or sets a value indicating whether this <see cref="ChildRequest"/> is approved.
         /// </summary>
         /// <value>
         ///   <c>true</c> if approved; otherwise, <c>false</c>.
@@ -146,7 +74,7 @@ namespace OmbiSharp.Endpoints.Request.Models
         [J("requestedDate")] public DateTimeOffset RequestedDate { get; set; }
 
         /// <summary>
-        /// Gets or sets a value indicating whether this <see cref="Movie"/> is available.
+        /// Gets or sets a value indicating whether this <see cref="ChildRequest"/> is available.
         /// </summary>
         /// <value>
         ///   <c>true</c> if available; otherwise, <c>false</c>.
@@ -162,7 +90,7 @@ namespace OmbiSharp.Endpoints.Request.Models
         [J("requestedUserId")] public string RequestedUserId { get; set; }
 
         /// <summary>
-        /// Gets or sets a value indicating whether this <see cref="Movie"/> is denied.
+        /// Gets or sets a value indicating whether this <see cref="ChildRequest"/> is denied.
         /// </summary>
         /// <value>
         ///   <c>true</c> if denied; otherwise, <c>false</c>.

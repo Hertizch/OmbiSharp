@@ -23,7 +23,7 @@ namespace OmbiSharp.Endpoints.Request.Models
         /// <value>
         /// The type of the user.
         /// </value>
-        [J("userType")] public long UserType { get; set; }
+        [J("userType")] public string UserType { get; set; }
 
         /// <summary>
         /// Gets or sets the provider user identifier.
@@ -47,7 +47,7 @@ namespace OmbiSharp.Endpoints.Request.Models
         /// <value>
         /// The emby connect user identifier.
         /// </value>
-        [J("embyConnectUserId")] public object EmbyConnectUserId { get; set; }
+        [J("embyConnectUserId")] public string EmbyConnectUserId { get; set; }
 
         /// <summary>
         /// Gets or sets the movie request limit.
@@ -55,7 +55,7 @@ namespace OmbiSharp.Endpoints.Request.Models
         /// <value>
         /// The movie request limit.
         /// </value>
-        [J("movieRequestLimit")] public long? MovieRequestLimit { get; set; }
+        [J("movieRequestLimit")] public long MovieRequestLimit { get; set; }
 
         /// <summary>
         /// Gets or sets the episode request limit.
@@ -63,7 +63,7 @@ namespace OmbiSharp.Endpoints.Request.Models
         /// <value>
         /// The episode request limit.
         /// </value>
-        [J("episodeRequestLimit")] public long? EpisodeRequestLimit { get; set; }
+        [J("episodeRequestLimit")] public long EpisodeRequestLimit { get; set; }
 
         /// <summary>
         /// Gets or sets the user access token.
@@ -71,7 +71,7 @@ namespace OmbiSharp.Endpoints.Request.Models
         /// <value>
         /// The user access token.
         /// </value>
-        [J("userAccessToken")] public object UserAccessToken { get; set; }
+        [J("userAccessToken")] public string UserAccessToken { get; set; }
 
         /// <summary>
         /// Gets or sets the notification user ids.
@@ -79,7 +79,7 @@ namespace OmbiSharp.Endpoints.Request.Models
         /// <value>
         /// The notification user ids.
         /// </value>
-        [J("notificationUserIds")] public List<object> NotificationUserIds { get; set; }
+        [J("notificationUserIds")] public List<NotificationUserId> NotificationUserIds { get; set; }
 
         /// <summary>
         /// Gets or sets a value indicating whether this instance is emby connect.
@@ -159,7 +159,7 @@ namespace OmbiSharp.Endpoints.Request.Models
         /// <value>
         /// The phone number.
         /// </value>
-        [J("phoneNumber")] public object PhoneNumber { get; set; }
+        [J("phoneNumber")] public string PhoneNumber { get; set; }
 
         /// <summary>
         /// Gets or sets a value indicating whether [phone number confirmed].
@@ -183,7 +183,7 @@ namespace OmbiSharp.Endpoints.Request.Models
         /// <value>
         /// The lockout end.
         /// </value>
-        [J("lockoutEnd")] public object LockoutEnd { get; set; }
+        [J("lockoutEnd")] public DateTimeOffset LockoutEnd { get; set; }
 
         /// <summary>
         /// Gets or sets a value indicating whether [lockout enabled].
